@@ -1,0 +1,81 @@
+﻿@model RegisterViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>株式会社盛武アプリ</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" ` />
+</head>
+<body>
+
+    <div class="col-md-4 offset-md-4 mt-5">
+        <div class="card">
+            <h5 class="card-header">Moritake-Gumi</h5>
+            <div class="card-body">
+                <form asp-controller="Auth" asp-action="Register" method="post">
+                    <input type="hidden" asp-for="ReturnUrl" />
+                    <div class="form-group">
+                        <label asp-for="Username">Username</label>
+                        <input type="text" placeholder="Please Enter Username" asp-for="Username" class="form-control" tabindex="1" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password">Password</label>
+                        <input asp-for="Password" placeholder="" class="form-control" tabindex="2" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword">Confirm Password</label>
+                        <input asp-for="ConfirmPassword" placeholder="" class="form-control" tabindex="2" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="FirstName">First Name</label>
+                        <input type="text" placeholder="Please Enter FirstName" asp-for="FirstName" class="form-control" tabindex="1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="LastName">Last Name</label>
+                        <input type="text" placeholder="Please Enter LastName" asp-for="LastName" class="form-control" tabindex="1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="JobTitle">JobTitle</label>
+                        <input type="text" placeholder="Please Enter JobTitle" asp-for="JobTitle" class="form-control" tabindex="1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Address">Address</label>
+                        <input type="text" placeholder="Please Enter Address" asp-for="Address" class="form-control" tabindex="1" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PostNo">PostNo</label>
+                        <input type="text" placeholder="Please Enter PostNo" asp-for="PostNo" class="form-control" tabindex="1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="PostNo">PostNo</label>
+                        <input type="text" placeholder="Please Enter PostNo" asp-for="PostNo" class="form-control" tabindex="1" />
+                    </div>
+
+                    <select asp-for="Gender" asp-items="Html.GetEnumSelectList<MG.Auth.Data.Enums.Gender>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-primary">
+                        Register
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

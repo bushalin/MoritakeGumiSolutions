@@ -1,0 +1,19 @@
+EmployeeId 
+    string MG0001
+
+
+Properties:
+    string FirstName
+    string LastName
+    string PhoneNo
+    Rank(ENUM) Rank
+    Department(Enum) Department
+    RestType(Enum) RestType
+    DateTime JoinedDate
+    Address Address
+    DateOfBirth
+    string Jobtitle
+    string postnumber ubinbanglo
+    string EmergencyContanctNumber
+    ENUM BloodType
+    ENUM GENDER

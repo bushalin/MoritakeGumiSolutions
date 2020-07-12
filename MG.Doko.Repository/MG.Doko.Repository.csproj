@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200701062115_adding_applicationId.cs" />
+    <Compile Remove="Migrations\20200701062115_adding_applicationId.Designer.cs" />
+    <Compile Remove="Migrations\20200701062315_adding_applicationId.cs" />
+    <Compile Remove="Migrations\20200701062315_adding_applicationId.Designer.cs" />
+    <Compile Remove="Migrations\20200701065606_remove-employee_add-applicationUser.cs" />
+    <Compile Remove="Migrations\20200701065606_remove-employee_add-applicationUser.Designer.cs" />
+    <Compile Remove="Migrations\20200701071347_remove-employee_add-applicationUser.cs" />
+    <Compile Remove="Migrations\20200701071347_remove-employee_add-applicationUser.Designer.cs" />
+    <Compile Remove="Migrations\20200703043550_add-employeeid.cs" />
+    <Compile Remove="Migrations\20200703043550_add-employeeid.Designer.cs" />
+    <Compile Remove="Migrations\20200703043828_add-employeeId.cs" />
+    <Compile Remove="Migrations\20200703043828_add-employeeId.Designer.cs" />
+    <Compile Remove="Migrations\20200703051109_adding foreignkey of ApplicationUser.cs" />
+    <Compile Remove="Migrations\20200703051109_adding foreignkey of ApplicationUser.Designer.cs" />
+    <Compile Remove="Migrations\20200703051529_adding foreignkey of ApplicationUser.cs" />
+    <Compile Remove="Migrations\20200703051529_adding foreignkey of ApplicationUser.Designer.cs" />
+    <Compile Remove="Migrations\20200703051723_adding foreignkey of ApplicationUser.cs" />
+    <Compile Remove="Migrations\20200703051723_adding foreignkey of ApplicationUser.Designer.cs" />
+    <Compile Remove="Migrations\20200703060125_adding foreignkey of ApplicationUser.cs" />
+    <Compile Remove="Migrations\20200703060125_adding foreignkey of ApplicationUser.Designer.cs" />
+    <Compile Remove="Migrations\20200703061307_adding foreignkey of ApplicationUser.cs" />
+    <Compile Remove="Migrations\20200703061307_adding foreignkey of ApplicationUser.Designer.cs" />
+    <Compile Remove="Migrations\20200703062214_adding foreignkey of ApplicationUser.cs" />
+    <Compile Remove="Migrations\20200703062214_adding foreignkey of ApplicationUser.Designer.cs" />
+    <Compile Remove="Migrations\20200703231143_new.cs" />
+    <Compile Remove="Migrations\20200703231143_new.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MG.Doko.Domain\MG.Doko.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

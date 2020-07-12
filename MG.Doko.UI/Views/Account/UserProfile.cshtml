@@ -1,0 +1,16 @@
+﻿@model UserProfile
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var claims = User.Claims.ToList();
+}
+
+<div class="container">
+    <table>
+        <tr>
+            <td>@Model.FirstName</td>
+        </tr>
+        <tr>
+            <td>@Model.LastName</td>
+        </tr>
+    </table>
+</div>

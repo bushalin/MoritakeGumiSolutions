@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MG.Doko.UI.Models.EmployeeLocation>
+
+<div class="text-center">
+    <h1>Current Location of the Employees</h1>
+</div>
+
+<div>
+    <table class="table table-sm table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Current Location</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{ int i = 1;}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@i</td>
+                    @{ i++; }
+                    <td>@item.ApplicationUserId</td>
+                    <td>@item.FirstName</td>
+                    <td>@item.JobTitle</td>
+                    <td>@item.CurrentLocation</td>
+                    @if (item.CurrentLocation == null)
+                    {
+                        <td><a asp-action="Create" asp-route-applicationUserId="@item.ApplicationUserId">Create</a></td>
+                    }
+                    else
+                    {
+                        @*<td><a asp-action="Edit" asp-route-employeeId="@item.Id">Edit</a></td>*@
+                        <td>@Html.ActionLink("Edit", "Edit", new LocationEdit { ApplicationUserId = item.ApplicationUserId, CurrentLocation = item.CurrentLocation })</td>
+                    }
+                    @*<td><a asp-action="Delete" asp-route-employeeId="@item.Id">Delete</a></td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
